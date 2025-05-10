@@ -22,4 +22,4 @@ To buld, use:
 docker compose build
 ```
 
-To run the fastapi server without docker, create a virtual environment, install from `requirements.txt`, and then use `fastapi dev app.py`.
+To run the fastapi server without docker, create a virtual environment, install from `requirements.txt`, and then use `fastapi dev backend` from the project root directory.
