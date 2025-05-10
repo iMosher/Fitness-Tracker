@@ -16,8 +16,6 @@ class Exercise:
       id (str): A unique identifier for the exercise, generated using UUID.
       name (str): The name of the exercise.
       description (str): A brief description of the exercise.
-      duration_minutes (int): The duration of the exercise in minutes.
-      date (datetime): The date and time of the exercise. Defaults to the current UTC time.
 
     Methods:
       add():
@@ -31,14 +29,15 @@ class Exercise:
         self,
         name: str,
         description: str,
-        duration_minutes: int,
-        date: datetime = None
+        duration_minutes: int = 0,
+        weight: float = 0,
+        sets: float = 0,
+        reps: float = 0,
     ):
         self.id = str(uuid.uuid4())  # Unique identifier
         self.name = name
         self.description = description
         self.duration_minutes = duration_minutes
-        self.date = date or datetime.timezone.utcnow()
 
     def add(self):
         # Simulate adding the exercise to a database or list
