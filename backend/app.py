@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from backend import router
 
 app = FastAPI(
     title="Fitness Tracker",
@@ -11,3 +12,5 @@ app = FastAPI(
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
+
+
